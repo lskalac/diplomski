@@ -3,7 +3,7 @@
   font: 14px 'Helvetica Neue', Helvetica, Arial, sans-serif;
   color: #4d4d4d;
   min-width: 550px;
-  max-width: 850px;
+  max-width: 1100px;
   margin: 0 auto;
 }
 
@@ -12,7 +12,50 @@ a.active {
 }
 
 nav {
-  padding-top: 20px;
   float:right;
+  height:20px;
   font-size: 20px;
+}
+
+nav > * {
+  padding: 20px;
+}
+
+.mainTitle{
+  text-align: center;
+  margin-top:40px;
+  margin-bottom: 20px;
+}
+
+
+.notes{
+ position: relative;
+}
+
+.notes h3{
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.activeNotes .btn-success, .activeNotes .btn-danger{
+  float: right;
+  margin-right: 20px;
+}
+
+.notebook .btn{
+  margin-left: 20px;
+}
+
+.notebook .col-md-6{
+  margin-bottom: 20px;
+  max-height: 300px;
+  overflow-y: scroll;
+}
+
+.notes .input-group{
+  position: absolute;
+  display: table;
+  right: 0;
+  margin-bottom: 70px;
+  margin-right: 5px;
 }

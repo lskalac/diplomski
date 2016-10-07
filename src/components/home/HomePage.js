@@ -1,15 +1,11 @@
-import React from 'react';
-import {Link} from 'react-router';
+var React = require('react');
 
-class HomePage extends React.Component{
-  render(){
-    return(
-      <div>
-        <h1> Home Page </h1>
-        <p> Some text on home page </p>
-      </div>
+var HomePage = React.createClass({
+  render:function(){
+    return (
+      <div>Some text on home page</div>
     );
   }
-}
+});
 
-export default HomePage;
+module.exports = HomePage;

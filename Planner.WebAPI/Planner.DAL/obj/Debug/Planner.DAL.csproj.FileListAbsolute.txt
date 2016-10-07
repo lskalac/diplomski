@@ -1,0 +1,14 @@
+C:\github\diplomski\Planner.WebAPI\Planner.DAL\bin\Debug\Planner.DAL.exe.config
+C:\github\diplomski\Planner.WebAPI\Planner.DAL\bin\Debug\Planner.DAL.exe
+C:\github\diplomski\Planner.WebAPI\Planner.DAL\bin\Debug\Planner.DAL.pdb
+C:\github\diplomski\Planner.WebAPI\Planner.DAL\bin\Debug\EntityFramework.dll
+C:\github\diplomski\Planner.WebAPI\Planner.DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\github\diplomski\Planner.WebAPI\Planner.DAL\bin\Debug\EntityFramework.xml
+C:\github\diplomski\Planner.WebAPI\Planner.DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\github\diplomski\Planner.WebAPI\Planner.DAL\obj\Debug\Planner.DAL.csprojResolveAssemblyReference.cache
+C:\github\diplomski\Planner.WebAPI\Planner.DAL\obj\Debug\Planner.DAL.exe
+C:\github\diplomski\Planner.WebAPI\Planner.DAL\obj\Debug\Planner.DAL.pdb
+C:\github\diplomski\Planner.WebAPI\Planner.DAL\bin\Debug\Planner.Model.Common.dll
+C:\github\diplomski\Planner.WebAPI\Planner.DAL\bin\Debug\Planner.Model.Common.pdb
+C:\github\diplomski\Planner.WebAPI\Planner.DAL\obj\Debug\Planner.DAL.Migrations.Initial.resources
+C:\github\diplomski\Planner.WebAPI\Planner.DAL\obj\Debug\Planner.DAL.csproj.GenerateResource.Cache

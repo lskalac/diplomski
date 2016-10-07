@@ -4,7 +4,7 @@ class TaskPage extends React.Component{
   render(){
     return(
       <div>
-        <h1> Task Page </h1>
+        <h1 className="mainTitle"> Task Page </h1>
         <p> Some text on task page </p>
       </div>
     );

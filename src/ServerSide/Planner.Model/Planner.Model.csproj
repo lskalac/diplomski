@@ -50,7 +50,7 @@
   <ItemGroup>
     <Compile Include="CategoryPOCO.cs" />
     <Compile Include="DIModule.cs" />
-    <Compile Include="Mapping\AutoMapper.cs" />
+    <Compile Include="Mapping\AutoMapping.cs" />
     <Compile Include="NotePOCO.cs" />
     <Compile Include="PriorityPOCO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -1,0 +1,5 @@
+C:\github\diplomski\Planner.WebAPI\Planner.Model.Common\bin\Debug\Planner.Model.Common.dll
+C:\github\diplomski\Planner.WebAPI\Planner.Model.Common\bin\Debug\Planner.Model.Common.pdb
+C:\github\diplomski\Planner.WebAPI\Planner.Model.Common\obj\Debug\Planner.Model.Common.csprojResolveAssemblyReference.cache
+C:\github\diplomski\Planner.WebAPI\Planner.Model.Common\obj\Debug\Planner.Model.Common.dll
+C:\github\diplomski\Planner.WebAPI\Planner.Model.Common\obj\Debug\Planner.Model.Common.pdb

@@ -89,3 +89,11 @@ C:\github\diplomski\src\ServerSide\Planner.WebAPI\bin\System.Web.Http.Owin.xml
 C:\github\diplomski\src\ServerSide\Planner.WebAPI\obj\Debug\Planner.WebAPI.csprojResolveAssemblyReference.cache
 C:\github\diplomski\src\ServerSide\Planner.WebAPI\obj\Debug\Planner.WebAPI.dll
 C:\github\diplomski\src\ServerSide\Planner.WebAPI\obj\Debug\Planner.WebAPI.pdb
+C:\github\diplomski\src\ServerSide\Planner.WebAPI\bin\Planner.Model.dll
+C:\github\diplomski\src\ServerSide\Planner.WebAPI\bin\Planner.Model.Common.dll
+C:\github\diplomski\src\ServerSide\Planner.WebAPI\bin\Ninject.dll
+C:\github\diplomski\src\ServerSide\Planner.WebAPI\bin\Planner.DAL.exe
+C:\github\diplomski\src\ServerSide\Planner.WebAPI\bin\Planner.Model.pdb
+C:\github\diplomski\src\ServerSide\Planner.WebAPI\bin\Planner.Model.Common.pdb
+C:\github\diplomski\src\ServerSide\Planner.WebAPI\bin\Ninject.xml
+C:\github\diplomski\src\ServerSide\Planner.WebAPI\bin\Planner.DAL.pdb

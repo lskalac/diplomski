@@ -2,3 +2,8 @@ C:\github\diplomski\Planner.WebAPI\Planner.Common\bin\Debug\Planner.Common.dll
 C:\github\diplomski\Planner.WebAPI\Planner.Common\bin\Debug\Planner.Common.pdb
 C:\github\diplomski\Planner.WebAPI\Planner.Common\obj\Debug\Planner.Common.dll
 C:\github\diplomski\Planner.WebAPI\Planner.Common\obj\Debug\Planner.Common.pdb
+C:\github\diplomski\src\ServerSide\Planner.Common\bin\Debug\Planner.Common.dll
+C:\github\diplomski\src\ServerSide\Planner.Common\bin\Debug\Planner.Common.pdb
+C:\github\diplomski\src\ServerSide\Planner.Common\obj\Debug\Planner.Common.csprojResolveAssemblyReference.cache
+C:\github\diplomski\src\ServerSide\Planner.Common\obj\Debug\Planner.Common.dll
+C:\github\diplomski\src\ServerSide\Planner.Common\obj\Debug\Planner.Common.pdb

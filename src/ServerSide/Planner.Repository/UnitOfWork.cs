@@ -18,13 +18,18 @@ namespace Planner.Repository
 
         public ICategoryRepository Categories { get; private set; }
         public INoteRepository Notes { get; private set; }
-
+        public IPriorityRepository Priorities { get; private set; }
+        public IReminderRepository Reminders { get; private set; }
+        public ITaskRepository Tasks { get; private set; }
 
         public UnitOfWork(PlannerContext context)
         {
             Context = context;
             Categories = new CategoryRepository(context);
             Notes = new NoteRepository(context);
+            Priorities = new PriorityRepository(context);
+            Reminders = new ReminderRepository(context);
+            Tasks = new TaskRepository(context);
         }
 
 

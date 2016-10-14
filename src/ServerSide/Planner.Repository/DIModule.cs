@@ -18,6 +18,9 @@ namespace Planner.Repository
 
             Bind<ICategoryRepository>().To<CategoryRepository>();
             Bind<INoteRepository>().To<NoteRepository>();
+            Bind<IPriorityRepository>().To<PriorityRepository>();
+            Bind<IReminderRepository>().To<ReminderRepository>();
+            Bind<ITaskRepository>().To<TaskRepository>();
 
         }
     }

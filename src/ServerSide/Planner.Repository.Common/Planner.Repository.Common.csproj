@@ -42,7 +42,10 @@
   <ItemGroup>
     <Compile Include="ICategoryRepository.cs" />
     <Compile Include="INoteRepository.cs" />
+    <Compile Include="IPriorityRepository.cs" />
+    <Compile Include="IReminderRepository.cs" />
     <Compile Include="IRepository.cs" />
+    <Compile Include="ITaskRepository.cs" />
     <Compile Include="IUnitOfWork.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

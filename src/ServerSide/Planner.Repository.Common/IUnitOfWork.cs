@@ -10,6 +10,10 @@ namespace Planner.Repository.Common
     {
         ICategoryRepository Categories { get; }
         INoteRepository Notes { get; }
+        IPriorityRepository Priorities { get; }
+        IReminderRepository Reminders { get; }
+        ITaskRepository Tasks { get; }
+
 
         void Complete();
     }

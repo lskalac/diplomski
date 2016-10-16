@@ -2,9 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Transactions;
+using System.Data.Entity;
+using System.Data.Entity.Infrastructure;
 using System.Threading.Tasks;
 using Planner.DAL.Models;
 using Planner.Repository.Common;
+
 
 namespace Planner.Repository
 {
@@ -13,34 +17,101 @@ namespace Planner.Repository
 
     public class UnitOfWork : IUnitOfWork
     {
-        
-        private readonly PlannerContext Context;
 
-        public ICategoryRepository Categories { get; private set; }
-        public INoteRepository Notes { get; private set; }
-        public IPriorityRepository Priorities { get; private set; }
-        public IReminderRepository Reminders { get; private set; }
-        public ITaskRepository Tasks { get; private set; }
 
-        public UnitOfWork(PlannerContext context)
+        protected IPlannerContext DbContext { get; private set; }
+
+        public UnitOfWork(IPlannerContext dbContext)
         {
-            Context = context;
-            Categories = new CategoryRepository(context);
-            Notes = new NoteRepository(context);
-            Priorities = new PriorityRepository(context);
-            Reminders = new ReminderRepository(context);
-            Tasks = new TaskRepository(context);
+            if (dbContext == null)
+            {
+                throw new ArgumentNullException("DbContext");
+            }
+            DbContext = dbContext;
         }
 
 
-        public void Complete()
+
+        public virtual Task<int> AddAsync<T>(T entity) where T : class
         {
-            Context.SaveChanges();
+            DbEntityEntry dbEntityEntry = DbContext.Entry(entity);
+            if (dbEntityEntry.State != EntityState.Detached)
+            {
+                dbEntityEntry.State = EntityState.Added;
+            }
+            else
+            {
+                DbContext.Set<T>().Add(entity);
+            }
+            return System.Threading.Tasks.Task.FromResult(1);
         }
+
+
+
+        public virtual Task<int> UpdateAsync<T>(T entity) where T : class
+        {
+
+            DbEntityEntry dbEntityEntry = DbContext.Entry(entity);
+            if (dbEntityEntry.State == EntityState.Detached)
+            {
+                DbContext.Set<T>().Attach(entity);
+            }
+            dbEntityEntry.State = EntityState.Modified;
+            return System.Threading.Tasks.Task.FromResult(1);
+        }
+
+
+
+        public virtual Task<int> DeleteAsync<T>(T entity) where T : class
+        {
+
+            DbEntityEntry dbEntityEntry = DbContext.Entry(entity);
+            if (dbEntityEntry.State != EntityState.Deleted)
+            {
+                dbEntityEntry.State = EntityState.Deleted;
+            }
+            else
+            {
+                DbContext.Set<T>().Attach(entity);
+                DbContext.Set<T>().Remove(entity);
+            }
+            return System.Threading.Tasks.Task.FromResult(1);
+            
+
+        }
+
+
+        public virtual Task<int> DeleteAsync<T>(int id) where T : class
+        {
+            var entity = DbContext.Set<T>().Find(id);
+            if (entity == null)
+            {
+                return System.Threading.Tasks.Task.FromResult(0);
+            }
+            return DeleteAsync<T>(entity);
+        }
+
+
+
+        public async Task<int> CommitAsync()
+        {
+            int result = 0;
+            using (TransactionScope scope = new TransactionScope(TransactionScopeAsyncFlowOption.Enabled))
+            {
+                result = await DbContext.SaveChangesAsync();
+                scope.Complete();
+            }
+            return result;
+        }
+
+
 
         public void Dispose()
         {
-            Context.Dispose();
+            DbContext.Dispose();
         }
+        
+
+
     }
 }

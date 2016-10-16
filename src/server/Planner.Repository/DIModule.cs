@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using Ninject;
 using Ninject.Modules;
+using Ninject.Extensions.Factory;
+using Planner.DAL.Models;
 using Planner.Repository.Common;
 
 namespace Planner.Repository
@@ -13,8 +15,12 @@ namespace Planner.Repository
     {
         public override void Load()
         {
+            Bind<IPlannerContext>().To<PlannerContext>();
+
             Bind(typeof(IRepository<>)).To(typeof(Repository<>));
             Bind<IUnitOfWork>().To<UnitOfWork>();
+            Bind<IRepositoryFactory>().ToFactory();
+            Bind<IUnitOfWorkFactory>().ToFactory();
 
             Bind<ICategoryRepository>().To<CategoryRepository>();
             Bind<INoteRepository>().To<NoteRepository>();

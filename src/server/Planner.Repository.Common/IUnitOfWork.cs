@@ -8,13 +8,14 @@ namespace Planner.Repository.Common
 {
     public interface IUnitOfWork : IDisposable
     {
-        ICategoryRepository Categories { get; }
-        INoteRepository Notes { get; }
-        IPriorityRepository Priorities { get; }
-        IReminderRepository Reminders { get; }
-        ITaskRepository Tasks { get; }
+        Task<int> CommitAsync();
 
+        Task<int> AddAsync<T>(T entity) where T : class;
 
-        void Complete();
+        Task<int> UpdateAsync<T>(T entity) where T : class;
+
+        Task<int> DeleteAsync<T>(T entity) where T : class;
+        Task<int> DeleteAsync<T>(int id) where T : class;
+
     }
 }

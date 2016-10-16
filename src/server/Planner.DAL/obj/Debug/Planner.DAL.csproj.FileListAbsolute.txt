@@ -30,3 +30,6 @@ C:\github\diplomski\src\ServerSide\Planner.DAL\obj\Debug\Planner.DAL.csprojResol
 C:\github\diplomski\src\ServerSide\Planner.DAL\obj\Debug\Planner.DAL.Migrations.Initial.resources
 C:\github\diplomski\src\ServerSide\Planner.DAL\obj\Debug\Planner.DAL.Migrations.PopulatePriorityTable.resources
 C:\github\diplomski\src\ServerSide\Planner.DAL\obj\Debug\Planner.DAL.csproj.GenerateResource.Cache
+C:\github\diplomski\src\server\Planner.DAL\bin\Debug\Planner.DAL.exe.config
+C:\github\diplomski\src\server\Planner.DAL\obj\Debug\Planner.DAL.exe
+C:\github\diplomski\src\server\Planner.DAL\obj\Debug\Planner.DAL.pdb

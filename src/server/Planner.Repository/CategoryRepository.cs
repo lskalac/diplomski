@@ -11,20 +11,8 @@ namespace Planner.Repository
 {
     //derives from generic repository (similarity of data access code)
     //additionally implements operations for ICategoryRepository interface
-    class CategoryRepository : Repository<ICategory>, ICategoryRepository
+    class CategoryRepository : ICategoryRepository
     {
-
-        public CategoryRepository(PlannerContext context)
-            :base(context)
-        {
-
-        }
-
-        public PlannerContext PlannerContext
-        {
-            get { return Context as PlannerContext;  }
-        }
-
     
 
     }

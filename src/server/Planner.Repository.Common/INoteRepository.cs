@@ -7,10 +7,11 @@ using Planner.Model.Common;
 
 namespace Planner.Repository.Common
 {
-    public interface INoteRepository : IRepository<INote>
+    public interface INoteRepository 
     {
+        /*
         IEnumerable<INote> GetAllNotesInCategory(int CategoryId);
 
-        IEnumerable<INote> GetAllActiveNotes();
+        IEnumerable<INote> GetAllActiveNotes();*/
     }
 }

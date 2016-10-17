@@ -9,17 +9,8 @@ using Planner.Repository.Common;
 
 namespace Planner.Repository
 {
-    class ReminderRepository : Repository<IReminder>, IReminderRepository
+    class ReminderRepository :  IReminderRepository
     {
-        public ReminderRepository(PlannerContext context)
-            :base(context)
-        {
 
-        }
-
-        public PlannerContext PlannerContext
-        {
-            get { return Context as PlannerContext; }
-        }
     }
 }

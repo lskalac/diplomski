@@ -17,8 +17,9 @@ namespace Planner.Repository
         {
             Bind<IPlannerContext>().To<PlannerContext>();
 
-            Bind(typeof(IRepository<>)).To(typeof(Repository<>));
+            Bind<IRepository>().To<Repository>();
             Bind<IUnitOfWork>().To<UnitOfWork>();
+
             Bind<IRepositoryFactory>().ToFactory();
             Bind<IUnitOfWorkFactory>().ToFactory();
 

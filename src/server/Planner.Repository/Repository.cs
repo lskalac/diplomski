@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.Entity;
+using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
+using Planner.DAL.Models;
 using Planner.Repository.Common;
 
 namespace Planner.Repository
@@ -12,52 +14,97 @@ namespace Planner.Repository
     //mediates between the domain and data mapping layers using a 
     //collection-like interface for accessing domain objects
 
-    class Repository<TEntity> : IRepository<TEntity> where TEntity : class
+    class Repository : IRepository
     {
 
-        //constructor
-        protected readonly DbContext Context;
+        protected IPlannerContext DbContext { get; private set; }
+        protected IUnitOfWorkFactory UnitOfWorkFactory { get; private set; }
 
-        public Repository(DbContext context)
+        public Repository(IPlannerContext dbContext, IUnitOfWorkFactory unitOfWorkFactory)
         {
-            Context = context;
+            if (dbContext == null)
+            {
+                throw new ArgumentNullException("DbContext");
+            }
+            DbContext = dbContext;
+            UnitOfWorkFactory = unitOfWorkFactory;
         }
 
 
-        //methods
-        public TEntity Get(int id)
-        {
-            return Context.Set<TEntity>().Find(id);
-        }
 
-        public IEnumerable<TEntity> GetAll()
+        public IUnitOfWork CreateUnitOfWork()
         {
-            return Context.Set<TEntity>().ToList();
+            return UnitOfWorkFactory.CreateUnitOfWork();
         }
 
 
-        public void Insert(TEntity entity)
+        public async Task<int> InsertAsync<T>(T entity) where T : class
         {
-
-            Context.Set<TEntity>().Add(entity);
+            DbEntityEntry dbEntityEntry = DbContext.Entry(entity);
+            if (dbEntityEntry.State != EntityState.Detached)
+            {
+                dbEntityEntry.State = EntityState.Added;
+            }
+            else
+            {
+                DbContext.Set<T>().Add(entity);
+            }
+            return await DbContext.SaveChangesAsync();
         }
 
-        public void Update(TEntity entity)
+
+
+
+        public async Task<int> UpdateAsync<T>(T entity) where T : class
         {
-            Context.Set<TEntity>().Attach(entity);
-            Context.Entry(entity).State = EntityState.Modified;
+            DbEntityEntry dbEntityEntry = DbContext.Entry(entity);
+            if (dbEntityEntry.State == EntityState.Detached)
+            {
+                DbContext.Set<T>().Attach(entity);
+            }
+            dbEntityEntry.State = EntityState.Modified;
+            return await DbContext.SaveChangesAsync();
         }
 
 
-        public void Delete(TEntity entity)
+
+
+        public IQueryable<T> GetAllAsync<T>() where T : class
         {
-            Context.Set<TEntity>().Remove(entity);
+            return DbContext.Set<T>().AsNoTracking();
         }
 
-        public void Delete(int id)
+        public Task<T> GetByIdAsync<T>(int id) where T : class
         {
-            TEntity entityToDelete = Context.Set<TEntity>().Find(id);
-            Delete(entityToDelete);
+            return DbContext.Set<T>().FindAsync(id);
+        }
+
+
+
+        public async Task<int> DeleteAsync<T>(T entity) where T : class
+        {
+            DbEntityEntry dbEntityEntry = DbContext.Entry(entity);
+            if (dbEntityEntry.State != EntityState.Deleted)
+            {
+                dbEntityEntry.State = EntityState.Deleted;
+            }
+            else
+            {
+                DbContext.Set<T>().Attach(entity);
+                DbContext.Set<T>().Remove(entity);
+            }
+            return await DbContext.SaveChangesAsync();
+        }
+
+
+        public async Task<int> DeleteAsync<T>(int id) where T : class
+        {
+            var entity = await GetByIdAsync<T>(id);
+            if (entity == null)
+            {
+                throw new KeyNotFoundException("Entity with specified ID not found.");
+            }
+            return await DeleteAsync<T>(entity);
         }
 
 

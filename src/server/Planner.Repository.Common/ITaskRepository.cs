@@ -7,10 +7,10 @@ using Planner.Model.Common;
 
 namespace Planner.Repository.Common
 {
-    public interface ITaskRepository : IRepository<ITask>
+    public interface ITaskRepository
     {
-        IEnumerable<ITask> GetAllTaskInCategory(int CategoryId);
+        /*IEnumerable<ITask> GetAllTaskInCategory(int CategoryId);
 
-        IEnumerable<ITask> GetAllTaskWithPriority(int PriorityId);
+        IEnumerable<ITask> GetAllTaskWithPriority(int PriorityId);*/
     }
 }

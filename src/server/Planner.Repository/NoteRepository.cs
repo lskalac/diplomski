@@ -10,9 +10,9 @@ using System.Data.Entity;
 
 namespace Planner.Repository
 {
-    class NoteRepository : Repository<INote>, INoteRepository
+    class NoteRepository : INoteRepository
     {
-         public NoteRepository(PlannerContext context)
+         /*public NoteRepository(PlannerContext context)
              :base(context)
          {
 
@@ -36,7 +36,7 @@ namespace Planner.Repository
             return PlannerContext.Set<INote>()
                 //.Where(n => n.IsActive == true)
                 .ToList();
-        }
+        }*/
 
 
     }

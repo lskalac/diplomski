@@ -9,18 +9,8 @@ using Planner.Repository.Common;
 
 namespace Planner.Repository
 {
-    class PriorityRepository : Repository<IPriority>, IPriorityRepository
+    class PriorityRepository : IPriorityRepository
     {
-        public PriorityRepository(PlannerContext context)
-             :base(context)
-         {
-
-        }
-
-        public PlannerContext PlannerContext
-        {
-            get { return Context as PlannerContext; }
-        }
 
 
 

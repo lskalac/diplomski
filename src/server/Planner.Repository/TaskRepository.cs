@@ -9,9 +9,9 @@ using Planner.Repository.Common;
 
 namespace Planner.Repository
 {
-    class TaskRepository : Repository<ITask>, ITaskRepository
+    class TaskRepository : ITaskRepository
     {
-        public TaskRepository(PlannerContext context)
+       /* public TaskRepository(PlannerContext context)
             :base(context)
         {
 
@@ -34,6 +34,6 @@ namespace Planner.Repository
             return PlannerContext.Set<ITask>()
                 .Where(t => t.ID == PriorityId)
                 .ToList();
-        }
+        }*/
     }
 }

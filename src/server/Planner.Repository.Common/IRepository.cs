@@ -8,19 +8,21 @@ using System.Threading.Tasks;
 namespace Planner.Repository.Common
 {   
     //generic - can be used for any application
-    public interface IRepository<TEntity> where TEntity : class
+    public interface IRepository
     {
-        TEntity Get(int id);
-        IEnumerable<TEntity> GetAll();
 
-        void Insert(TEntity entity);
+        IUnitOfWork CreateUnitOfWork();
 
-        void Update(TEntity entity);
 
- 
-        void Delete(TEntity entity);
+        Task<int> InsertAsync<T>(T entity) where T : class;
+        Task<int> UpdateAsync<T>(T entity) where T : class;
 
-        void Delete(int id);
+        IQueryable<T> GetAllAsync<T>() where T : class;
+        Task<T> GetByIdAsync<T>(int id) where T : class;
+
+        Task<int> DeleteAsync<T>(T entity) where T : class;
+        Task<int> DeleteAsync<T>(int id) where T : class;
+
 
     }
 }

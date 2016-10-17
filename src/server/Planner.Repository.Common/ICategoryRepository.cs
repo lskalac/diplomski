@@ -8,7 +8,7 @@ using Planner.Model.Common;
 namespace Planner.Repository.Common
 {
     //any operations specific for categories that aren't in generic repository
-    public interface ICategoryRepository : IRepository<ICategory>
+    public interface ICategoryRepository 
     {
     }
 }

@@ -7,7 +7,7 @@ using Planner.Model.Common;
 
 namespace Planner.Repository.Common
 {
-    public interface IReminderRepository : IRepository<IReminder>
+    public interface IReminderRepository 
     {
     }
 }

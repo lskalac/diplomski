@@ -47,9 +47,12 @@ namespace Planner.DAL.Models
         DbSet<Task> Tasks { get; set; }
 
 
-
+        //for access to entities of the given type in the context and the underlying store
         DbSet<TEntity> Set<TEntity>() where TEntity : class;
+        //provides access to information about the entity and the ability to perform actions on the entity
         DbEntityEntry<TEntity> Entry<TEntity>(TEntity entity) where TEntity : class;
+        //Asynchronously saves all changes made in this context to the underlying database
+        //result: number of objects written to the underlying database
         Task<int> SaveChangesAsync();
 
 

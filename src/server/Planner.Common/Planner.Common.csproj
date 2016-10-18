@@ -32,6 +32,10 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Linq.Dynamic, Version=1.0.6132.35681, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Linq.Dynamic.1.0.7\lib\net40\System.Linq.Dynamic.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -40,8 +44,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Filters\CategoryFilter.cs" />
+    <Compile Include="Filters\ICategoryFilter.cs" />
+    <Compile Include="Filters\INoteFilter.cs" />
+    <Compile Include="Filters\NoteFilter.cs" />
+    <Compile Include="Filters\Paging\IPagingParameters.cs" />
+    <Compile Include="Filters\Paging\PagingParameters.cs" />
+    <Compile Include="Filters\Sorting\ISortingParam.cs" />
+    <Compile Include="Filters\Sorting\ISortingParameters.cs" />
+    <Compile Include="Filters\Sorting\SortingMethod.cs" />
+    <Compile Include="Filters\Sorting\SortingParam.cs" />
+    <Compile Include="Filters\Sorting\SortingParameters.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

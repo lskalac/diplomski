@@ -10,7 +10,7 @@ namespace Planner.Repository.Common
     //adding new entity <=> adding new entry into this interface
     public interface IRepositoryFactory
     {
-        //creates an intance of enetity repository
+        //creates an intance of entity repository
         ICategoryRepository CreateCategoryRepository();
         INoteRepository CreateNoteRepository();
         IPriorityRepository CreatePriorityRepository();

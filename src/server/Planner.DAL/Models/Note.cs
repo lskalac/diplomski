@@ -18,7 +18,7 @@ namespace Planner.DAL.Models
         public string Text { get; set; }
  
         [Column("IsActive")] 
-        public Nullable<byte> IsActive { get; set; }
+        public Nullable<bool> IsActive { get; set; }
  
         [Column("CategoryID")] 
         public int CategoryID { get; set; }

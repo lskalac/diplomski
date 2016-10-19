@@ -14,7 +14,7 @@ namespace Planner.Repository
     //mediates between the domain and data mapping layers using a 
     //collection-like interface for accessing domain objects
 
-    class Repository : IRepository
+    class Repository : Common.Repository
     {
 
         protected IPlannerContext DbContext { get; private set; }

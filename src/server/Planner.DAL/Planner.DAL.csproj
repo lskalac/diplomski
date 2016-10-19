@@ -62,6 +62,10 @@
     <Compile Include="Migrations\201610071907152_PopulatePriorityTable.Designer.cs">
       <DependentUpon>201610071907152_PopulatePriorityTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201610192037201_changedIsActiveType.cs" />
+    <Compile Include="Migrations\201610192037201_changedIsActiveType.Designer.cs">
+      <DependentUpon>201610192037201_changedIsActiveType.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\Mapping\CategoryMap.cs" />
@@ -101,6 +105,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201610071907152_PopulatePriorityTable.resx">
       <DependentUpon>201610071907152_PopulatePriorityTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610192037201_changedIsActiveType.resx">
+      <DependentUpon>201610192037201_changedIsActiveType.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

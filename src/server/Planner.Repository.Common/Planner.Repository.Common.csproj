@@ -52,6 +52,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Planner.Common\Planner.Common.csproj">
+      <Project>{0d4f6d30-7202-46cd-86d0-f255cef6914a}</Project>
+      <Name>Planner.Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Planner.Model.Common\Planner.Model.Common.csproj">
       <Project>{25e1416e-8ab2-4cc6-b357-f38a5c90b49a}</Project>
       <Name>Planner.Model.Common</Name>

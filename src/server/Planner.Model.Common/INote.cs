@@ -11,7 +11,7 @@ namespace Planner.Model.Common
         int ID { get; set; }
         string Title { get; set; }
         string Text { get; set; }
-        Nullable<byte> IsActive { get; set; }
+        Nullable<bool> IsActive { get; set; }
         int CategoryID { get; set; }
     }
 }

@@ -30,6 +30,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AutoMapper, Version=5.1.1.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.5.1.1\lib\net45\AutoMapper.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Castle.Core, Version=3.2.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
       <HintPath>..\packages\Castle.Core.3.2.0\lib\net45\Castle.Core.dll</HintPath>
       <Private>True</Private>
@@ -77,6 +81,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Planner.Common\Planner.Common.csproj">
+      <Project>{0d4f6d30-7202-46cd-86d0-f255cef6914a}</Project>
+      <Name>Planner.Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Planner.DAL\Planner.DAL.csproj">
       <Project>{2498ebd7-9c89-456d-b5d6-ba97a30e0823}</Project>
       <Name>Planner.DAL</Name>

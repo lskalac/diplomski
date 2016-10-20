@@ -17,35 +17,31 @@ namespace Planner.Repository
 {
     class NoteRepository : Repository, INoteRepository
     {
-        /*public NoteRepository(PlannerContext context)
-            :base(context)
-        {
+        public IPlannerContext dbContext;
+        public IUnitOfWorkFactory unitOfWorkFactory;
 
-        }
-
-        public PlannerContext PlannerContext
-        {
-            get { return Context as PlannerContext; }
-        }
-
-
-       public IEnumerable<INote> GetAllNotesInCategory(int CategoryId)
-       {
-           return PlannerContext.Set<INote>()
-               .Where(n => n.ID == CategoryId)
-               .ToList();
-       }
-
-       public IEnumerable<INote> GetAllActiveNotes()
-       {
-           return PlannerContext.Set<INote>()
-               //.Where(n => n.IsActive == true)
-               .ToList();
-       }*/
         public NoteRepository(IPlannerContext dbContext, IUnitOfWorkFactory unitOfWorkFactory) 
             : base(dbContext, unitOfWorkFactory)
         {
         }
+
+        public Task<int> InsertAsync(INote entity)
+        {
+            return InsertAsync<Note>(Mapper.Map<Note>(entity));
+        }
+
+        public Task<int> UpdateAsync(INote entity)
+        {
+            return UpdateAsync<Note>(Mapper.Map<Note>(entity));
+        }
+
+
+
+        public async Task<INote> GetAsync(int id)
+        {
+            return Mapper.Map<INote>(await GetByIdAsync<Note>(id));
+        }
+
 
         public async Task<List<INote>> GetAsync(INoteFilter filter, ISortingParameters sortingParams, IPagingParameters pagingParams)
         {
@@ -82,5 +78,19 @@ namespace Planner.Repository
 
             return Mapper.Map<List<INote>>(await notes.ToListAsync());
         }
+
+
+
+        public async Task<int> DeleteAsync(INote entity)
+        {
+            return await DeleteAsync<Note>(Mapper.Map<Note>(entity));
+        }
+
+        public async Task<int> DeleteAsync(int id)
+        {
+            return await DeleteAsync<Note>(id);
+        }
+
+
     }
 }

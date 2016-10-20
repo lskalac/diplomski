@@ -28,6 +28,24 @@ namespace Planner.Repository
         {
         }
 
+
+        public Task<int> InsertAsync(ICategory entity)
+        {
+            return InsertAsync<Category>(Mapper.Map<Category>(entity));
+        }
+
+        public Task<int> UpdateAsync(ICategory entity)
+        {
+            return UpdateAsync<Category>(Mapper.Map<Category>(entity));
+        }
+
+        
+
+        public async Task<ICategory> GetAsync(int id)
+        {
+            return Mapper.Map<ICategory>(await GetByIdAsync<Category>(id));
+        }
+
         public async Task<List<ICategory>> GetAsync(ICategoryFilter filter, ISortingParameters sortingParams, IPagingParameters pagingParams)
         {
             //OrderBy = SortingMethod.OrderBy<ICategory>(categories, sortingParam);
@@ -62,5 +80,20 @@ namespace Planner.Repository
             //map categories to <List<ICategory>> <=> translate data from categories <List<ICategory>>:categories interface
             return Mapper.Map<List<ICategory>>(await categories.ToListAsync());
         }
+
+
+
+        public async Task<int> DeleteAsync(ICategory entity)
+        {
+            return await DeleteAsync<Category>(Mapper.Map<Category>(entity));
+        }
+
+        public async Task<int> DeleteAsync(int id)
+        {
+            return await DeleteAsync<Category>(id);
+        }
+
+
+
     }
 }

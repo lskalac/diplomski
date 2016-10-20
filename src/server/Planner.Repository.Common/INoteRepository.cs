@@ -17,7 +17,14 @@ namespace Planner.Repository.Common
 
         IEnumerable<INote> GetAllActiveNotes();*/
 
+        Task<int> InsertAsync(INote entity);
+        Task<int> UpdateAsync(INote entity);
+
+        Task<INote> GetAsync(int id);
         Task<List<INote>> GetAsync(INoteFilter filter, ISortingParameters sortingParams, IPagingParameters pagingParams);
+
+        Task<int> DeleteAsync(INote entity);
+        Task<int> DeleteAsync(int id);
 
     }
 }

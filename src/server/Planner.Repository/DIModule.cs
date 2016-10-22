@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Ninject;
 using Ninject.Modules;
 using Ninject.Extensions.Factory;
-using Planner.DAL.Models;
+using Planner.DAL;
 using Planner.Repository.Common;
 
 namespace Planner.Repository

@@ -1,0 +1,4 @@
+C:\github\diplomski\src\server\Planner.Service\bin\Debug\Planner.Service.dll
+C:\github\diplomski\src\server\Planner.Service\bin\Debug\Planner.Service.pdb
+C:\github\diplomski\src\server\Planner.Service\obj\Debug\Planner.Service.dll
+C:\github\diplomski\src\server\Planner.Service\obj\Debug\Planner.Service.pdb

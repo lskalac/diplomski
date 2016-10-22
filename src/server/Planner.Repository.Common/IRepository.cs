@@ -18,10 +18,10 @@ namespace Planner.Repository.Common
         Task<int> UpdateAsync<T>(T entity) where T : class;
 
         IQueryable<T> GetAllAsync<T>() where T : class;
-        Task<T> GetByIdAsync<T>(int id) where T : class;
+        Task<T> GetByIdAsync<T>(Guid id) where T : class;
 
         Task<int> DeleteAsync<T>(T entity) where T : class;
-        Task<int> DeleteAsync<T>(int id) where T : class;
+        Task<int> DeleteAsync<T>(Guid id) where T : class;
 
 
     }

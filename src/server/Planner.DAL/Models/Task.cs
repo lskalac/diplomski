@@ -9,7 +9,7 @@ namespace Planner.DAL.Models
     {
  
         [Column("ID")] 
-        public int ID { get; set; }
+        public Guid ID { get; set; }
  
         [Column("Title")] 
         public string Title { get; set; }
@@ -30,13 +30,14 @@ namespace Planner.DAL.Models
         public string Description { get; set; }
  
         [Column("ReminderID")] 
-        public Nullable<int> ReminderID { get; set; }
+        public Nullable<Guid> ReminderID { get; set; }
  
         [Column("PriorityID")] 
-        public int PriorityID { get; set; }
+        public Guid PriorityID { get; set; }
  
         [Column("CategoryID")] 
-        public int CategoryID { get; set; }
+        public Guid CategoryID { get; set; }
+
         public virtual Category Category { get; set; }
         public virtual Priority Priority { get; set; }
         public virtual Reminder Reminder { get; set; }

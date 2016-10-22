@@ -6,7 +6,7 @@ using System.Transactions;
 using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
 using System.Threading.Tasks;
-using Planner.DAL.Models;
+using Planner.DAL;
 using Planner.Repository.Common;
 
 
@@ -81,7 +81,7 @@ namespace Planner.Repository
         }
 
 
-        public virtual Task<int> DeleteAsync<T>(int id) where T : class
+        public virtual Task<int> DeleteAsync<T>(Guid id) where T : class
         {
             var entity = DbContext.Set<T>().Find(id);
             if (entity == null)

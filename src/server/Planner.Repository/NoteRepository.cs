@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Planner.Common.Filters;
 using Planner.Common.Filters.Paging;
 using Planner.Common.Filters.Sorting;
+using Planner.DAL;
 using Planner.DAL.Models;
 using Planner.Model.Common;
 using Planner.Repository.Common;
@@ -37,7 +38,7 @@ namespace Planner.Repository
 
 
 
-        public async Task<INote> GetAsync(int id)
+        public async Task<INote> GetAsync(Guid id)
         {
             return Mapper.Map<INote>(await GetByIdAsync<Note>(id));
         }
@@ -86,7 +87,7 @@ namespace Planner.Repository
             return await DeleteAsync<Note>(Mapper.Map<Note>(entity));
         }
 
-        public async Task<int> DeleteAsync(int id)
+        public async Task<int> DeleteAsync(Guid id)
         {
             return await DeleteAsync<Note>(id);
         }

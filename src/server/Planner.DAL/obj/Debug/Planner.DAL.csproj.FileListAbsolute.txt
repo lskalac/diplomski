@@ -46,3 +46,4 @@ C:\github\diplomski\src\server\Planner.DAL\obj\Debug\Planner.DAL.Migrations.Init
 C:\github\diplomski\src\server\Planner.DAL\obj\Debug\Planner.DAL.Migrations.PopulatePriorityTable.resources
 C:\github\diplomski\src\server\Planner.DAL\obj\Debug\Planner.DAL.csproj.GenerateResource.Cache
 C:\github\diplomski\src\server\Planner.DAL\obj\Debug\Planner.DAL.Migrations.changedIsActiveType.resources
+C:\github\diplomski\src\server\Planner.DAL\obj\Debug\Planner.DAL.Migrations.changedTypesOfPKs.resources

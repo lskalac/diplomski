@@ -9,7 +9,7 @@ namespace Planner.Model
 {
     class TaskPOCO : ITask
     {
-        public int ID { get; set; }
+        public Guid ID { get; set; }
         public string Title { get; set; }
         public System.DateTime Date { get; set; }
         public System.DateTime StartTime { get; set; }
@@ -17,9 +17,9 @@ namespace Planner.Model
         public string Place { get; set; }
         public string Description { get; set; }
 
-        public Nullable<int> ReminderID { get; set; }
-        public int PriorityID { get; set; }
-        public int CategoryID { get; set; }
+        public Nullable<Guid> ReminderID { get; set; }
+        public Guid PriorityID { get; set; }
+        public Guid CategoryID { get; set; }
 
     }
 }

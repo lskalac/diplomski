@@ -6,6 +6,7 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
+using Planner.DAL;
 using Planner.DAL.Models;
 using Planner.Repository.Common;
 
@@ -74,7 +75,7 @@ namespace Planner.Repository
             return DbContext.Set<T>().AsNoTracking();
         }
 
-        public Task<T> GetByIdAsync<T>(int id) where T : class
+        public Task<T> GetByIdAsync<T>(Guid id) where T : class
         {
             return DbContext.Set<T>().FindAsync(id);
         }
@@ -97,7 +98,7 @@ namespace Planner.Repository
         }
 
 
-        public async Task<int> DeleteAsync<T>(int id) where T : class
+        public async Task<int> DeleteAsync<T>(Guid id) where T : class
         {
             var entity = await GetByIdAsync<T>(id);
             if (entity == null)

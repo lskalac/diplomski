@@ -16,3 +16,6 @@ C:\github\diplomski\src\ServerSide\Planner.Repository\bin\Debug\EntityFramework.
 C:\github\diplomski\src\ServerSide\Planner.Repository\bin\Debug\Ninject.xml
 C:\github\diplomski\src\ServerSide\Planner.Repository\obj\Debug\Planner.Repository.dll
 C:\github\diplomski\src\ServerSide\Planner.Repository\obj\Debug\Planner.Repository.pdb
+C:\github\diplomski\src\server\Planner.Repository\obj\Debug\Planner.Repository.csprojResolveAssemblyReference.cache
+C:\github\diplomski\src\server\Planner.Repository\obj\Debug\Planner.Repository.dll
+C:\github\diplomski\src\server\Planner.Repository\obj\Debug\Planner.Repository.pdb

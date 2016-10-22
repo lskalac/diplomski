@@ -8,7 +8,7 @@ namespace Planner.Model.Common
 {
     public interface IReminder
     {
-        int ID { get; set; }
+        Guid ID { get; set; }
         Nullable<System.DateTime> TimeBefore { get; set; }
     }
 }

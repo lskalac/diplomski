@@ -9,7 +9,7 @@ namespace Planner.DAL.Models
     {
  
         [Column("ID")] 
-        public int ID { get; set; }
+        public Guid ID { get; set; }
  
         [Column("Title")] 
         public string Title { get; set; }
@@ -21,7 +21,7 @@ namespace Planner.DAL.Models
         public Nullable<bool> IsActive { get; set; }
  
         [Column("CategoryID")] 
-        public int CategoryID { get; set; }
+        public Guid CategoryID { get; set; }
         public virtual Category Category { get; set; }
     }
 }

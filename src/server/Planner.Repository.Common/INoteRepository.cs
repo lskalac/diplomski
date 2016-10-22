@@ -20,11 +20,11 @@ namespace Planner.Repository.Common
         Task<int> InsertAsync(INote entity);
         Task<int> UpdateAsync(INote entity);
 
-        Task<INote> GetAsync(int id);
+        Task<INote> GetAsync(Guid id);
         Task<List<INote>> GetAsync(INoteFilter filter, ISortingParameters sortingParams, IPagingParameters pagingParams);
 
         Task<int> DeleteAsync(INote entity);
-        Task<int> DeleteAsync(int id);
+        Task<int> DeleteAsync(Guid id);
 
     }
 }

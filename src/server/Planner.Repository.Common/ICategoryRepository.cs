@@ -16,10 +16,10 @@ namespace Planner.Repository.Common
         Task<int> InsertAsync(ICategory entity);
         Task<int> UpdateAsync(ICategory entity);
 
-        Task<ICategory> GetAsync(int id);
+        Task<ICategory> GetAsync(Guid id);
         Task<List<ICategory>> GetAsync(ICategoryFilter filter, ISortingParameters sortingParams, IPagingParameters pagingParams);
 
         Task<int> DeleteAsync(ICategory entity);
-        Task<int> DeleteAsync(int id);
+        Task<int> DeleteAsync(Guid id);
     }
 }

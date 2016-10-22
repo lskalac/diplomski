@@ -5,14 +5,14 @@ namespace Planner.DAL.Migrations
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<Planner.DAL.Models.PlannerContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<Planner.DAL.PlannerContext>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
         }
 
-        protected override void Seed(Planner.DAL.Models.PlannerContext context)
+        protected override void Seed(Planner.DAL.PlannerContext context)
         {
             //  This method will be called after migrating to the latest version.
 

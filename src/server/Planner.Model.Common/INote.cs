@@ -8,10 +8,10 @@ namespace Planner.Model.Common
 {
     public interface INote
     {
-        int ID { get; set; }
+        Guid ID { get; set; }
         string Title { get; set; }
         string Text { get; set; }
         Nullable<bool> IsActive { get; set; }
-        int CategoryID { get; set; }
+        Guid CategoryID { get; set; }
     }
 }

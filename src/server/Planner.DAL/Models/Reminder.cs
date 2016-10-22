@@ -14,7 +14,7 @@ namespace Planner.DAL.Models
 
  
         [Column("ID")] 
-        public int ID { get; set; }
+        public Guid ID { get; set; }
  
         [Column("TimeBefore")] 
         public Nullable<System.DateTime> TimeBefore { get; set; }

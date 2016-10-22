@@ -66,6 +66,10 @@
     <Compile Include="Migrations\201610192037201_changedIsActiveType.Designer.cs">
       <DependentUpon>201610192037201_changedIsActiveType.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201610221655057_changedTypesOfPKs.cs" />
+    <Compile Include="Migrations\201610221655057_changedTypesOfPKs.Designer.cs">
+      <DependentUpon>201610221655057_changedTypesOfPKs.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\Mapping\CategoryMap.cs" />
@@ -74,7 +78,7 @@
     <Compile Include="Models\Mapping\ReminderMap.cs" />
     <Compile Include="Models\Mapping\TaskMap.cs" />
     <Compile Include="Models\Note.cs" />
-    <Compile Include="Models\PlannerContext.cs" />
+    <Compile Include="PlannerContext.cs" />
     <Compile Include="Models\Priority.cs" />
     <Compile Include="Models\Reminder.cs" />
     <Compile Include="Models\Task.cs" />
@@ -108,6 +112,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201610192037201_changedIsActiveType.resx">
       <DependentUpon>201610192037201_changedIsActiveType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610221655057_changedTypesOfPKs.resx">
+      <DependentUpon>201610221655057_changedTypesOfPKs.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

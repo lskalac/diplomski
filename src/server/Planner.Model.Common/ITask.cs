@@ -8,7 +8,7 @@ namespace Planner.Model.Common
 {
     public interface ITask
     {
-        int ID { get; set; }
+        Guid ID { get; set; }
         string Title { get; set; }
         System.DateTime Date { get; set; }
         System.DateTime StartTime { get; set; }
@@ -16,8 +16,8 @@ namespace Planner.Model.Common
         string Place { get; set; }
         string Description { get; set; }
 
-        Nullable<int> ReminderID { get; set; }
-        int PriorityID { get; set; }
-        int CategoryID { get; set; }
+        Nullable<Guid> ReminderID { get; set; }
+        Guid PriorityID { get; set; }
+        Guid CategoryID { get; set; }
     }
 }

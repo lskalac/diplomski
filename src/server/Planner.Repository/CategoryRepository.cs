@@ -9,6 +9,7 @@ using Planner.Common.Filters.Sorting;
 using Planner.Common.Filters.Paging;
 using Planner.Model.Common;
 using Planner.Repository.Common;
+using Planner.DAL;
 using Planner.DAL.Models;
 using AutoMapper;
 
@@ -41,7 +42,7 @@ namespace Planner.Repository
 
         
 
-        public async Task<ICategory> GetAsync(int id)
+        public async Task<ICategory> GetAsync(Guid id)
         {
             return Mapper.Map<ICategory>(await GetByIdAsync<Category>(id));
         }
@@ -88,7 +89,7 @@ namespace Planner.Repository
             return await DeleteAsync<Category>(Mapper.Map<Category>(entity));
         }
 
-        public async Task<int> DeleteAsync(int id)
+        public async Task<int> DeleteAsync(Guid id)
         {
             return await DeleteAsync<Category>(id);
         }

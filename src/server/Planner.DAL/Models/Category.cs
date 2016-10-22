@@ -15,10 +15,11 @@ namespace Planner.DAL.Models
 
  
         [Column("ID")] 
-        public int ID { get; set; }
+        public Guid ID { get; set; }
 
         [Column("Name")] 
         public string Name { get; set; }
+
         public virtual ICollection<Note> Notes { get; set; }
         public virtual ICollection<Task> Tasks { get; set; }
     }

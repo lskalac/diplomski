@@ -10,7 +10,7 @@ namespace Planner.Model
     class ReminderPOCO : IReminder
     {
   
-        public int ID { get; set; }
+        public Guid ID { get; set; }
         public Nullable<System.DateTime> TimeBefore { get; set; }
 
     }

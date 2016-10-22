@@ -5,3 +5,13 @@ C:\github\diplomski\src\ServerSide\Planner.Repository.Common\bin\Debug\Planner.M
 C:\github\diplomski\src\ServerSide\Planner.Repository.Common\obj\Debug\Planner.Repository.Common.csprojResolveAssemblyReference.cache
 C:\github\diplomski\src\ServerSide\Planner.Repository.Common\obj\Debug\Planner.Repository.Common.dll
 C:\github\diplomski\src\ServerSide\Planner.Repository.Common\obj\Debug\Planner.Repository.Common.pdb
+C:\github\diplomski\src\server\Planner.Repository.Common\bin\Debug\Planner.Repository.Common.dll
+C:\github\diplomski\src\server\Planner.Repository.Common\bin\Debug\Planner.Repository.Common.pdb
+C:\github\diplomski\src\server\Planner.Repository.Common\bin\Debug\Planner.Common.dll
+C:\github\diplomski\src\server\Planner.Repository.Common\bin\Debug\Planner.Model.Common.dll
+C:\github\diplomski\src\server\Planner.Repository.Common\bin\Debug\System.Linq.Dynamic.dll
+C:\github\diplomski\src\server\Planner.Repository.Common\bin\Debug\Planner.Common.pdb
+C:\github\diplomski\src\server\Planner.Repository.Common\bin\Debug\Planner.Model.Common.pdb
+C:\github\diplomski\src\server\Planner.Repository.Common\obj\Debug\Planner.Repository.Common.csprojResolveAssemblyReference.cache
+C:\github\diplomski\src\server\Planner.Repository.Common\obj\Debug\Planner.Repository.Common.dll
+C:\github\diplomski\src\server\Planner.Repository.Common\obj\Debug\Planner.Repository.Common.pdb

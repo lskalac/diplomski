@@ -47,9 +47,11 @@
     <Compile Include="Filters\CategoryFilter.cs" />
     <Compile Include="Filters\ICategoryFilter.cs" />
     <Compile Include="Filters\INoteFilter.cs" />
+    <Compile Include="Filters\IPriorityFilter.cs" />
     <Compile Include="Filters\NoteFilter.cs" />
     <Compile Include="Filters\Paging\IPagingParameters.cs" />
     <Compile Include="Filters\Paging\PagingParameters.cs" />
+    <Compile Include="Filters\PriorityFilter.cs" />
     <Compile Include="Filters\Sorting\ISortingParam.cs" />
     <Compile Include="Filters\Sorting\ISortingParameters.cs" />
     <Compile Include="Filters\Sorting\SortingMethod.cs" />

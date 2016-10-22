@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace Planner.Repository.Common
 {   
     //generic - can be used for any application
-    public interface Repository
+    public interface IRepository
     {
 
         IUnitOfWork CreateUnitOfWork();

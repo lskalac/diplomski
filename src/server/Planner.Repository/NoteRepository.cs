@@ -16,37 +16,38 @@ using AutoMapper;
 
 namespace Planner.Repository
 {
-    class NoteRepository : Repository, INoteRepository
+    class NoteRepository : INoteRepository
     {
-        public IPlannerContext dbContext;
-        public IUnitOfWorkFactory unitOfWorkFactory;
 
-        public NoteRepository(IPlannerContext dbContext, IUnitOfWorkFactory unitOfWorkFactory) 
-            : base(dbContext, unitOfWorkFactory)
+        protected IRepository Repository { get; private set; }
+
+        NoteRepository(IRepository repository)
         {
-        }
+            Repository = repository;
+        }        
+
 
         public Task<int> InsertAsync(INote entity)
         {
-            return InsertAsync<Note>(Mapper.Map<Note>(entity));
+            return Repository.InsertAsync<Note>(Mapper.Map<Note>(entity));
         }
 
         public Task<int> UpdateAsync(INote entity)
         {
-            return UpdateAsync<Note>(Mapper.Map<Note>(entity));
+            return Repository.UpdateAsync<Note>(Mapper.Map<Note>(entity));
         }
 
 
 
         public async Task<INote> GetAsync(Guid id)
         {
-            return Mapper.Map<INote>(await GetByIdAsync<Note>(id));
+            return Mapper.Map<INote>(await Repository.GetByIdAsync<Note>(id));
         }
 
 
         public async Task<List<INote>> GetAsync(INoteFilter filter, ISortingParameters sortingParams, IPagingParameters pagingParams)
         {
-            IQueryable<Note> notes = GetAllAsync<Note>();
+            IQueryable<Note> notes = Repository.GetAllAsync<Note>();
 
             if (filter != null)
             {
@@ -84,12 +85,12 @@ namespace Planner.Repository
 
         public async Task<int> DeleteAsync(INote entity)
         {
-            return await DeleteAsync<Note>(Mapper.Map<Note>(entity));
+            return await Repository.DeleteAsync<Note>(Mapper.Map<Note>(entity));
         }
 
         public async Task<int> DeleteAsync(Guid id)
         {
-            return await DeleteAsync<Note>(id);
+            return await Repository.DeleteAsync<Note>(id);
         }
 
 

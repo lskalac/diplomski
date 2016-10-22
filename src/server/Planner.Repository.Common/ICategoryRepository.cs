@@ -11,7 +11,7 @@ using Planner.Model.Common;
 namespace Planner.Repository.Common
 {
     //any operations specific for categories that aren't in generic repository
-    public interface ICategoryRepository : Repository
+    public interface ICategoryRepository 
     {
         Task<int> InsertAsync(ICategory entity);
         Task<int> UpdateAsync(ICategory entity);

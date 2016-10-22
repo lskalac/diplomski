@@ -17,41 +17,39 @@ namespace Planner.Repository
 {
     //derives from generic repository (similarity of data access code)
     //additionally implements operations for ICategoryRepository interface
-    class CategoryRepository : Repository, ICategoryRepository
+    class CategoryRepository : ICategoryRepository
     {
-        public IPlannerContext dbContext;
-        public IUnitOfWorkFactory unitOfWorkFactory;
 
-        //base class: Repository, derived class: CategoryRepository
-        //This constructor will call Repository.Repository(dbContext, unitOfWorkFactory)
-        public CategoryRepository(IPlannerContext dbContext, IUnitOfWorkFactory unitOfWorkFactory) 
-            : base(dbContext, unitOfWorkFactory)
+        protected IRepository Repository { get; private set; }
+
+        public CategoryRepository(IRepository repository)
         {
+            Repository = repository;
         }
 
 
         public Task<int> InsertAsync(ICategory entity)
         {
-            return InsertAsync<Category>(Mapper.Map<Category>(entity));
+            return Repository.InsertAsync<Category>(Mapper.Map<Category>(entity));
         }
 
         public Task<int> UpdateAsync(ICategory entity)
         {
-            return UpdateAsync<Category>(Mapper.Map<Category>(entity));
+            return Repository.UpdateAsync<Category>(Mapper.Map<Category>(entity));
         }
 
         
 
         public async Task<ICategory> GetAsync(Guid id)
         {
-            return Mapper.Map<ICategory>(await GetByIdAsync<Category>(id));
+            return Mapper.Map<ICategory>(await Repository.GetByIdAsync<Category>(id));
         }
 
         public async Task<List<ICategory>> GetAsync(ICategoryFilter filter, ISortingParameters sortingParams, IPagingParameters pagingParams)
         {
             //OrderBy = SortingMethod.OrderBy<ICategory>(categories, sortingParam);
              
-            IQueryable<Category> categories = GetAllAsync<Category>(); 
+            IQueryable<Category> categories = Repository.GetAllAsync<Category>(); 
 
             if (filter != null)
             {
@@ -86,12 +84,12 @@ namespace Planner.Repository
 
         public async Task<int> DeleteAsync(ICategory entity)
         {
-            return await DeleteAsync<Category>(Mapper.Map<Category>(entity));
+            return await Repository.DeleteAsync<Category>(Mapper.Map<Category>(entity));
         }
 
         public async Task<int> DeleteAsync(Guid id)
         {
-            return await DeleteAsync<Category>(id);
+            return await Repository.DeleteAsync<Category>(id);
         }
 
 

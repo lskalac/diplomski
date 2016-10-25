@@ -52,10 +52,10 @@
     <Compile Include="Filters\Paging\IPagingParameters.cs" />
     <Compile Include="Filters\Paging\PagingParameters.cs" />
     <Compile Include="Filters\PriorityFilter.cs" />
-    <Compile Include="Filters\Sorting\ISortingParam.cs" />
+    <Compile Include="Filters\Sorting\ISortingPair.cs" />
     <Compile Include="Filters\Sorting\ISortingParameters.cs" />
     <Compile Include="Filters\Sorting\SortingMethod.cs" />
-    <Compile Include="Filters\Sorting\SortingParam.cs" />
+    <Compile Include="Filters\Sorting\SortingPair.cs" />
     <Compile Include="Filters\Sorting\SortingParameters.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

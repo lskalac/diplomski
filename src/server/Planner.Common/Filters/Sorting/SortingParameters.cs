@@ -8,11 +8,11 @@ namespace Planner.Common.Filters.Sorting
 {
     class SortingParameters : ISortingParameters
     {
-        public IList<ISortingParam> Sorters { get;  set; }
+        public IList<ISortingPair> Sorters { get;  set; }
 
         public SortingParameters()
         {
-            Sorters = new List<ISortingParam>();
+            Sorters = new List<ISortingPair>();
         }
     }
 }

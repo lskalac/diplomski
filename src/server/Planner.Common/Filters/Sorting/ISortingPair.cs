@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Planner.Common.Filters.Sorting
 {
-    public interface ISortingParam
+    public interface ISortingPair
     {
         bool Ascending { get; }
         string OrderBy { get; }

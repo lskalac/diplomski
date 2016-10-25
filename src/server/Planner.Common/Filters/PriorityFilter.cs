@@ -10,7 +10,7 @@ namespace Planner.Common.Filters
     {
         public string Name { get; private set; }
 
-        PriorityFilter(string name)
+        public PriorityFilter(string name)
         {
             Name = name;
         }

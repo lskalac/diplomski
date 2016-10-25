@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace Planner.Common.Filters.Sorting
 {
-    class SortingParam : ISortingParam
+    class SortingPair : ISortingPair
     {
         public bool Ascending { get; private set; }
         public string OrderBy { get; private set; }
 
-        public SortingParam(bool ascending, string orderBy)
+        public SortingPair(bool ascending, string orderBy)
         {
             Ascending = ascending;
             OrderBy = orderBy;

@@ -16,7 +16,7 @@ namespace Planner.Service.Common
         Task<int> UpdateAsync(ICategory entity);
 
         Task<ICategory> GetAsync(Guid id);
-        Task<List<ICategory>> GetAsync(ICategoryFilter filter, ISortingParameters sortingParams, IPagingParameters pagingParams);
+        Task<List<ICategory>> GetAsync(ICategoryFilter filter = null, ISortingParameters sortingParams = null, IPagingParameters pagingParams = null);
 
         Task<int> DeleteAsync(ICategory entity);
         Task<int> DeleteAsync(Guid id);

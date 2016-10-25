@@ -10,7 +10,7 @@ namespace Planner.Common.Filters
     {
         public string Name { get; private set; }
 
-        CategoryFilter(string name)
+        public CategoryFilter(string name)
         {
             Name = name;
         }

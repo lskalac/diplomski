@@ -41,7 +41,7 @@ namespace Planner.Service
             return Repository.GetAsync(id);
         }
 
-        public Task<List<ICategory>> GetAsync(ICategoryFilter filter, ISortingParameters sortingParams, IPagingParameters pagingParams)
+        public Task<List<ICategory>> GetAsync(ICategoryFilter filter = null, ISortingParameters sortingParams = null, IPagingParameters pagingParams = null)
         {
             return Repository.GetAsync(filter, sortingParams, pagingParams);
         }

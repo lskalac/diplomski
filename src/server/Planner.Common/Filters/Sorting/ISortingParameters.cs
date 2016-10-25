@@ -8,6 +8,6 @@ namespace Planner.Common.Filters.Sorting
 {
     public interface ISortingParameters
     {
-        IList<ISortingParam> Sorters { get; }
+        IList<ISortingPair> Sorters { get; }
     }
 }

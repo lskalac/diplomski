@@ -13,7 +13,7 @@ namespace Planner.Common.Filters.Paging
 
         private int MaxPageSize = 100;
 
-        PagingParameters(int pageNumber, int pageSize)
+        public PagingParameters(int pageNumber, int pageSize)
         {
             PageNumber = (pageNumber > 0) ? pageNumber : 1;
             PageSize = (pageSize > 0 && pageSize <= MaxPageSize) ? pageSize : MaxPageSize;

@@ -2,3 +2,9 @@ C:\github\diplomski\src\server\Planner.Service.Common\bin\Debug\Planner.Service.
 C:\github\diplomski\src\server\Planner.Service.Common\bin\Debug\Planner.Service.Common.pdb
 C:\github\diplomski\src\server\Planner.Service.Common\obj\Debug\Planner.Service.Common.dll
 C:\github\diplomski\src\server\Planner.Service.Common\obj\Debug\Planner.Service.Common.pdb
+C:\github\diplomski\src\server\Planner.Service.Common\bin\Debug\Planner.Common.dll
+C:\github\diplomski\src\server\Planner.Service.Common\bin\Debug\Planner.Model.Common.dll
+C:\github\diplomski\src\server\Planner.Service.Common\bin\Debug\System.Linq.Dynamic.dll
+C:\github\diplomski\src\server\Planner.Service.Common\bin\Debug\Planner.Common.pdb
+C:\github\diplomski\src\server\Planner.Service.Common\bin\Debug\Planner.Model.Common.pdb
+C:\github\diplomski\src\server\Planner.Service.Common\obj\Debug\Planner.Service.Common.csprojResolveAssemblyReference.cache

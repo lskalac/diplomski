@@ -2,3 +2,15 @@ C:\github\diplomski\src\server\Planner.Service\bin\Debug\Planner.Service.dll
 C:\github\diplomski\src\server\Planner.Service\bin\Debug\Planner.Service.pdb
 C:\github\diplomski\src\server\Planner.Service\obj\Debug\Planner.Service.dll
 C:\github\diplomski\src\server\Planner.Service\obj\Debug\Planner.Service.pdb
+C:\github\diplomski\src\server\Planner.Service\bin\Debug\Ninject.dll
+C:\github\diplomski\src\server\Planner.Service\bin\Debug\Planner.Common.dll
+C:\github\diplomski\src\server\Planner.Service\bin\Debug\Planner.Model.Common.dll
+C:\github\diplomski\src\server\Planner.Service\bin\Debug\Planner.Repository.Common.dll
+C:\github\diplomski\src\server\Planner.Service\bin\Debug\Planner.Service.Common.dll
+C:\github\diplomski\src\server\Planner.Service\bin\Debug\System.Linq.Dynamic.dll
+C:\github\diplomski\src\server\Planner.Service\bin\Debug\Planner.Common.pdb
+C:\github\diplomski\src\server\Planner.Service\bin\Debug\Planner.Model.Common.pdb
+C:\github\diplomski\src\server\Planner.Service\bin\Debug\Planner.Repository.Common.pdb
+C:\github\diplomski\src\server\Planner.Service\bin\Debug\Planner.Service.Common.pdb
+C:\github\diplomski\src\server\Planner.Service\bin\Debug\Ninject.xml
+C:\github\diplomski\src\server\Planner.Service\obj\Debug\Planner.Service.csprojResolveAssemblyReference.cache

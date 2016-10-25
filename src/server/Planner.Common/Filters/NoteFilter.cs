@@ -13,7 +13,7 @@ namespace Planner.Common.Filters
         public bool? IsActive { get; private set; }
 
 
-        NoteFilter(string title, bool? isActive)
+        public NoteFilter(string title, bool? isActive)
         {
             Title = title;
             IsActive = isActive;

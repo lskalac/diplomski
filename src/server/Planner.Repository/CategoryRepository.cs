@@ -45,7 +45,7 @@ namespace Planner.Repository
             return Mapper.Map<ICategory>(await Repository.GetByIdAsync<Category>(id));
         }
 
-        public async Task<List<ICategory>> GetAsync(ICategoryFilter filter, ISortingParameters sortingParams, IPagingParameters pagingParams)
+        public async Task<List<ICategory>> GetAsync(ICategoryFilter filter = null, ISortingParameters sortingParams = null, IPagingParameters pagingParams = null)
         {
             //OrderBy = SortingMethod.OrderBy<ICategory>(categories, sortingParam);
              

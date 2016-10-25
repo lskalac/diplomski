@@ -43,7 +43,7 @@ namespace Planner.Repository
         }
 
 
-        public async Task<List<IPriority>> GetAsync(IPriorityFilter filter, ISortingParameters sortingParams, IPagingParameters pagingParams)
+        public async Task<List<IPriority>> GetAsync(IPriorityFilter filter = null, ISortingParameters sortingParams = null, IPagingParameters pagingParams = null)
         {
             IQueryable<Priority> priorities = Repository.GetAllAsync<Priority>();
 

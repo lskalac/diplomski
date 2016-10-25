@@ -16,7 +16,7 @@ namespace Planner.Repository.Common
         Task<int> UpdateAsync(IPriority entity);
 
         Task<IPriority> GetAsync(Guid id);
-        Task<List<IPriority>> GetAsync(IPriorityFilter filter, ISortingParameters sortingParams, IPagingParameters pagingParams);
+        Task<List<IPriority>> GetAsync(IPriorityFilter filter = null, ISortingParameters sortingParams = null, IPagingParameters pagingParams = null);
 
         Task<int> DeleteAsync(IPriority entity);
         Task<int> DeleteAsync(Guid id);

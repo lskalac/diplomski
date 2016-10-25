@@ -45,7 +45,7 @@ namespace Planner.Repository
         }
 
 
-        public async Task<List<INote>> GetAsync(INoteFilter filter, ISortingParameters sortingParams, IPagingParameters pagingParams)
+        public async Task<List<INote>> GetAsync(INoteFilter filter = null, ISortingParameters sortingParams = null, IPagingParameters pagingParams = null)
         {
             IQueryable<Note> notes = Repository.GetAllAsync<Note>();
 

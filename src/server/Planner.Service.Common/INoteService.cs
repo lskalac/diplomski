@@ -16,7 +16,7 @@ namespace Planner.Service.Common
         Task<int> UpdateAsync(INote entity);
 
         Task<INote> GetAsync(Guid id);
-        Task<List<INote>> GetAsync(INoteFilter filter, ISortingParameters sortingParams, IPagingParameters pagingParams);
+        Task<List<INote>> GetAsync(INoteFilter filter = null, ISortingParameters sortingParams = null, IPagingParameters pagingParams = null);
 
         Task<int> DeleteAsync(INote entity);
         Task<int> DeleteAsync(Guid id);

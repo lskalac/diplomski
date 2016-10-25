@@ -13,6 +13,8 @@ namespace Planner.Service
         public override void Load()
         {
             Bind<ICategoryService>().To<CategoryService>();
+            Bind<INoteService>().To<NoteService>();
+            Bind<IPriorityService>().To<PriorityService>();
         }
     }
 }

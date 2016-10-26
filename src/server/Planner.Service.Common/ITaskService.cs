@@ -8,14 +8,10 @@ using Planner.Common.Filters.Paging;
 using Planner.Common.Filters.Sorting;
 using Planner.Model.Common;
 
-namespace Planner.Repository.Common
+namespace Planner.Service.Common
 {
-    public interface ITaskRepository
+    public interface ITaskService
     {
-        /*IEnumerable<ITask> GetAllTaskInCategory(int CategoryId);
-
-        IEnumerable<ITask> GetAllTaskWithPriority(int PriorityId);*/
-
         Task<int> InsertAsync(ITask entity);
         Task<int> UpdateAsync(ITask entity);
 

@@ -43,6 +43,7 @@
     <Compile Include="ICategoryService.cs" />
     <Compile Include="INoteService.cs" />
     <Compile Include="IPriorityService.cs" />
+    <Compile Include="ITaskService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

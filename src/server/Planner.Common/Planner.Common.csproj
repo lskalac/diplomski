@@ -48,6 +48,7 @@
     <Compile Include="Filters\ICategoryFilter.cs" />
     <Compile Include="Filters\INoteFilter.cs" />
     <Compile Include="Filters\IPriorityFilter.cs" />
+    <Compile Include="Filters\ITaskFilter.cs" />
     <Compile Include="Filters\NoteFilter.cs" />
     <Compile Include="Filters\Paging\IPagingParameters.cs" />
     <Compile Include="Filters\Paging\PagingParameters.cs" />
@@ -57,6 +58,7 @@
     <Compile Include="Filters\Sorting\SortingMethod.cs" />
     <Compile Include="Filters\Sorting\SortingPair.cs" />
     <Compile Include="Filters\Sorting\SortingParameters.cs" />
+    <Compile Include="Filters\TaskFilter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

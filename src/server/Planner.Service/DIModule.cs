@@ -15,6 +15,7 @@ namespace Planner.Service
             Bind<ICategoryService>().To<CategoryService>();
             Bind<INoteService>().To<NoteService>();
             Bind<IPriorityService>().To<PriorityService>();
+            Bind<IReminderService>().To<ReminderService>();
             Bind<ITaskService>().To<TaskService>();
         }
     }

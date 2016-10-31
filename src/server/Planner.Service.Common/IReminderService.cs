@@ -8,9 +8,9 @@ using Planner.Common.Filters.Paging;
 using Planner.Common.Filters.Sorting;
 using Planner.Model.Common;
 
-namespace Planner.Repository.Common
+namespace Planner.Service.Common
 {
-    public interface IReminderRepository 
+    public interface IReminderService
     {
         Task<int> InsertAsync(IReminder entity);
         Task<int> UpdateAsync(IReminder entity);
